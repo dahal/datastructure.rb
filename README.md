@@ -19,9 +19,21 @@ Or install it yourself as:
 ## Usage
 
 ### Queue
-```
+```ruby
 queue = DataStructure::Queue.new
-queue.enque(1)
+#<DataStructure::Queue:0x007f7ff4406a48 @data=[]>
+queue.all #=> []
+queue.enqueue(1) #=> [1]
+queue.add(2) #=> [1, 2]
+queue.all #=> [1, 2]
+queue.size #=> 2
+queue.length #=> 2
+queue.count #=> 2
+queue.dequeue #=> 1
+queue.count #=> 1
+queue.dequeue #=> 2
+queue.all #=> []
+queue.dequeue #RuntimeError: QueueError: There is nothing to dequeue.
 ```
 
 ## Contributing
